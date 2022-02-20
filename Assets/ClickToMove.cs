@@ -14,7 +14,7 @@ public class ClickToMove : MonoBehaviour
 
     private Vector3 targetLocation;
 
-    private NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
 
  
 
@@ -52,6 +52,20 @@ public class ClickToMove : MonoBehaviour
 
         }
 
+        if(Input.GetKeyDown("left shift"))
+        {
+
+            if(GetComponent<NavMeshAgent>().speed < 14.0f)
+            {
+GetComponent<NavMeshAgent>().speed = 14.0f;
+Debug.Log(GetComponent<NavMeshAgent>().speed);
+
+            } else {
+                GetComponent<NavMeshAgent>().speed = 7.0f;
+                Debug.Log(GetComponent<NavMeshAgent>().speed);
+            }
+           
+        }
  
 
         // If we are within stoppingDistance (defined in the navmeshagent component in the inspector), 
