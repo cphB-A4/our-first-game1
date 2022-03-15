@@ -9,9 +9,6 @@ public class EmemyScript : MonoBehaviour
 
     public GameObject Player;
 
-    public static bool gameOver;
-
-    public GameObject gameOverPanel;
 
     public float MobDistanceRun = 1000.0f;
     // Start is called before the first frame update
@@ -36,11 +33,5 @@ public class EmemyScript : MonoBehaviour
             Mob.SetDestination(newPos);
         }
 
-        if(distance < 2.0f){
-            Debug.Log("game over");
-            //gives damage to player ... To do
-            gameOver = true;
-            gameOverPanel.SetActive(true);
-        }
     }
 }
