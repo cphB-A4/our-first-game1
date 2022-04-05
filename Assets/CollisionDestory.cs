@@ -14,7 +14,7 @@ public class CollisionDestory : MonoBehaviour
     {
        float distance = Vector3.Distance(transform.position, Player.transform.position);
        if(distance < 2.0f){
-            Debug.Log("5 Points");
+            Debug.Log("Object collided with player");
             gameObject.SetActive(false);
                    }
             
